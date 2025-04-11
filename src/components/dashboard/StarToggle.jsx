@@ -10,7 +10,7 @@ const StarToggle = ({repoId}) => {
     useEffect(() => {
         const fetchStarStatus = async () => {
             try {
-                const res = await axios.get(`18.144.47.130:3000/${userId}`);
+                const res = await axios.get(`http://18.144.47.130:3000/${userId}`);
                 setStarred(res.data.starRepos.includes(repoId));
             } catch (err) {
                 console.error("Error fetching star status", err);
@@ -21,7 +21,7 @@ const StarToggle = ({repoId}) => {
 
     const toggleStar = async() => {
         try {
-            const res = await axios.patch(`18.144.47.130:3000/user/toggleStar`, {
+            const res = await axios.patch(`http://18.144.47.130:3000/user/toggleStar`, {
                 userId,
                 repoId
             });

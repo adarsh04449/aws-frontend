@@ -18,7 +18,7 @@ const Profile = () => {
             const userId = localStorage.getItem("userId");
             if (userId) {
                 try {
-                    const res = await axios.get(`18.144.47.130:3000/userProfile/${userId}`);
+                    const res = await axios.get(`http://18.144.47.130:3000/userProfile/${userId}`);
                     setUserDetails(res.data);
                 }catch (err) {
                     console.error("Cannot fetch user details: ", err);

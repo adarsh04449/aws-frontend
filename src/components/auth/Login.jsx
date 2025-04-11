@@ -26,7 +26,7 @@ const Login = () => {
         event.preventDefault();
         try {
             setLoading(true);
-            const res = await axios.post("18.144.47.130:3000/login",
+            const res = await axios.post("http://18.144.47.130:3000/login",
                 {
                     email: email,
                     password: password

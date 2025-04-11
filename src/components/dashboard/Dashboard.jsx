@@ -15,12 +15,12 @@ const Dashboard = () => {
     const deleteRepo = async(id) => {
         const userId = localStorage.getItem("userId");
         try {
-            await fetch(`18.144.47.130:3000/repo/delete/${id}`, {
+            await fetch(`http://18.144.47.130:3000/repo/delete/${id}`, {
                 method:"DELETE"
             });
 
 
-            const response = await fetch(`18.144.47.130:3000/repo/user/${userId}`);
+            const response = await fetch(`http://18.144.47.130:3000/repo/user/${userId}`);
             const data = await response.json();
             setRepositories(data.repositories);
         } catch (err) {
@@ -34,7 +34,7 @@ const Dashboard = () => {
 
         const fetchRepositories = async () => {
             try {
-                const response = await fetch(`18.144.47.130:3000/repo/user/${userId}`);
+                const response = await fetch(`http://18.144.47.130:3000/repo/user/${userId}`);
 
                 const data = await response.json();
                 setRepositories(data.repositories);
@@ -46,7 +46,7 @@ const Dashboard = () => {
 
         const fetchSuggestedRepositories = async () => {
             try {
-                const response = await fetch(`18.144.47.130:3000/repo/all`);
+                const response = await fetch(`http://18.144.47.130:3000/repo/all`);
 
                 const data = await response.json();
                 setSuggestedRepos(data);

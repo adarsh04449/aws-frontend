@@ -17,7 +17,7 @@ const CreateRepoForm = () => {
         const userId = localStorage.getItem("userId");
 
         try {
-            const response = await axios.post("18.144.47.130:3000/repo/create", {
+            const response = await axios.post("http://18.144.47.130:3000/repo/create", {
                 name,
                 description,
                 visibility: visibility === "public",
