@@ -1,0 +1,111 @@
+/* Center the entire form container */
+.create-repo-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+  }
+  
+  /* GitHub-style form styling */
+  .github-form {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    padding: 30px;
+    border-radius: 6px;
+    color: #c9d1d9;
+    max-width: 600px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .github-form h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f0f6fc;
+  }
+  
+  /* Layout for each row */
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .form-row label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  
+  .required {
+    color: #f85149;
+    margin-left: 4px;
+  }
+  
+  .optional {
+    font-weight: normal;
+    color: #8b949e;
+    font-size: 13px;
+  }
+  
+  .github-form input[type="text"],
+  .github-form textarea {
+    background-color: #161b22;
+    color: #f0f6fc;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  
+  .github-form input[type="text"]:focus,
+  .github-form textarea:focus {
+    border-color: #58a6ff;
+  }
+  
+  .github-form textarea {
+    resize: vertical;
+    min-height: 60px;
+  }
+  
+  .radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .radio-group label {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  .github-form input[type="radio"] {
+    margin-right: 8px;
+  }
+  
+  .form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+  
+  .github-form button {
+    background-color: #238636;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .github-form button:hover {
+    background-color: #2ea043;
+  }
+  
